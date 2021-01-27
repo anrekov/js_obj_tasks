@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object tasks</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Check console!</h1>
+    <script>
+        const person = {
+            firstName: 'Jack',
+            lastName: 'Sparrow',
+            age: 25,
+            location: 'Caribbean sea',
+        }
+
+        
+        // <property>: <value>
+        for (let key in person) {
+            console.log( `${key}: ${person[key]}` );
+        }
+
+
+        // Other Props
+        person['First name'] = person.firstName;
+        delete person.firstName;
+        
+        person['Last name'] = person.lastName;
+        delete person.lastName;
+        
+        person['Age'] = person.age;
+        delete person.age;
+
+        person.Age = '25 ages';
+
+        person['Where to find'] = person.location;
+        delete person.location;
+
+        console.log('\n\n');
+        for (let key in person) {
+            console.log( `${key}: ${person[key]}` );
+        }
+
+    </script>
+</body>
+</html>
